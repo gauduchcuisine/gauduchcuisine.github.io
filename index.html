@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RestoJob - Lycée Antonin Carême</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth; /* Permet un défilement doux vers les ancres */
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .lycee-logo {
+            max-width: 300px;
+            margin: 0 auto 2rem;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        /* Style pour la section cible quand on clique sur les liens */
+        :target {
+            padding-top: 80px; /* Compense la hauteur du header fixe */
+            margin-top: -80px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-gray-800">
+                        <span class="text-red-500">Resto</span><span class="text-blue-600">Job</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-800 hover:text-red-500">Accueil</a>
+                    <a href="#etudiant" class="text-gray-800 hover:text-red-500">Je cherche un stage</a>
+                    <a href="#employeur" class="text-gray-800 hover:text-red-500">Je propose un stage</a>
+                    <a href="./src/droisetdevoirs.html" class="text-gray-800 hover:text-red-500">Droits & Devoirs</a>
+                    <a href="./src/convention.html" class="text-gray-800 hover:text-red-500">Convention</a>
+		    <a href="./src/offres.html" class="text-gray-800 hover:text-red-500">Offres d'emplois</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section avec les deux images -->
+    <section class="hero">
+        <!-- Logo du lycée centré -->
+        <img src="https://lyc-careme-savigny-77.fr/sites/lyc-careme-savigny-77.fr/squelettes/images/bandeau/bandeau_LAC_h250.jpg?1709467335" 
+             alt="Lycée Antonin Carême" 
+             class="lycee-logo">
+             
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Bienvenue sur RestoJob</h1>
+        <p class="text-xl md:text-2xl mb-6">Plateforme de mise en relation du Lycée Antonin Carême</p>
+        <div class="flex gap-4">
+            <a href="#etudiant" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-6 rounded-lg transition duration-300">
+                Je cherche un stage
+            </a>
+            <a href="#employeur" class="bg-white hover:bg-gray-100 text-gray-800 font-bold py-2 px-6 rounded-lg transition duration-300">
+                Je propose un stage
+            </a>
+        </div>
+    </section>
+
+    <!-- Contenu principal -->
+    <main class="container mx-auto px-6 py-12">
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Comment ça marche ?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-white rounded-lg shadow">
+                    <div class="text-red-500 text-4xl mb-4">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">1. Trouvez</h3>
+                    <p>Découvrez les offres qui correspondent à votre profil</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">2. Postulez</h3>
+                    <p>Envoyez votre candidature en quelques clics</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow">
+                    <div class="text-green-500 text-4xl mb-4">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">3. Travaillez</h3>
+                    <p>Commencez votre stage dans les meilleures conditions</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-50 p-8 rounded-lg mb-16">
+            <h2 class="text-2xl font-bold mb-4">À propos du Lycée Antonin Carême</h2>
+            <p class="mb-4">Notre lycée professionnel forme les futurs talents de l'hôtellerie-restauration depuis plus de 20 ans.</p>
+            <div class="flex flex-wrap gap-4">
+                <div class="flex items-center">
+                    <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                    <span>Place Courbet, 77176 Savigny-le-Temple</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-phone text-blue-500 mr-2"></i>
+                    <span>01 64 41 92 93</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-envelope text-green-500 mr-2"></i>
+                    <span>ce.0772244w@ac-creteil.fr</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pavés pour lycéens et employeurs avec ancres -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Pavé Lycéen -->
+            <div id="etudiant" class="bg-white p-6 rounded-lg shadow-lg scroll-mt-20">
+                <h3 class="text-xl font-bold mb-4">Si tu es un lycéen :</h3>
+                <form id="student-form" class="space-y-4">
+                    <div>
+                        <label for="student-name" class="block text-gray-700 font-medium mb-2">Nom</label>
+                        <input type="text" id="student-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label for="student-firstname" class="block text-gray-700 font-medium mb-2">Prénom</label>
+                        <input type="text" id="student-firstname" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label for="student-age" class="block text-gray-700 font-medium mb-2">Âge</label>
+                        <input type="number" id="student-age" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label for="student-gender" class="block text-gray-700 font-medium mb-2">Sexe</label>
+                        <select id="student-gender" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                            <option value="male">Masculin</option>
+                            <option value="female">Féminin</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="diploma" class="block text-gray-700 font-medium mb-2">Diplôme en cours</label>
+                        <select id="diploma" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                            <option value="CAP">CAP</option>
+                            <option value="2nd BAC PRO">2nd BAC PRO</option>
+                            <option value="1ère BAC PRO">1ère BAC PRO</option>
+                            <option value="Terminale BAC PRO">Terminale BAC PRO</option>
+                            <option value="BTS 1ère A">BTS 1ère A</option>
+                            <option value="BTS 2ème A">BTS 2ème A</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="internship-date" class="block text-gray-700 font-medium mb-2">Date de stage</label>
+                        <input type="date" id="internship-date" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label for="domain" class="block text-gray-700 font-medium mb-2">Domaine</label>
+                        <select id="domain" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                            <option value="cuisine">Cuisine</option>
+                            <option value="service">Service</option>
+                            <option value="moitié">Moitié / Moitié</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="location" class="block text-gray-700 font-medium mb-2">Zone géographique (ville ou département)</label>
+                        <input type="text" id="location" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-gray-700 font-medium mb-2">Numéro de portable</label>
+                        <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 font-medium mb-2">Adresse mail</label>
+                        <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label for="cv" class="block text-gray-700 font-medium mb-2">Pièce jointe obligatoire : CV</label>
+                        <input type="file" id="cv" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg">Soumettre</button>
+                </form>
+            </div>
+
+            <!-- Pavé Employeur -->
+            <div id="employeur" class="bg-white p-6 rounded-lg shadow-lg scroll-mt-20">
+                <h3 class="text-xl font-bold mb-4">Si tu es un employeur :</h3>
+                <form id="employer-form" class="space-y-4">
+                    <div>
+                        <label for="establishment-name" class="block text-gray-700 font-medium mb-2">Nom de l'établissement</label>
+                        <input type="text" id="establishment-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label for="establishment-address" class="block text-gray-700 font-medium mb-2">Adresse de l'établissement</label>
+                        <input type="text" id="establishment-address" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label for="establishment-city" class="block text-gray-700 font-medium mb-2">Ville</label>
+                        <input type="text" id="establishment-city" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label for="business-type" class="block text-gray-700 font-medium mb-2">Type d'établissement</label>
+                        <select id="business-type" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                            <option value="hotel">Hôtel</option>
+                            <option value="brasserie">Brasserie</option>
+                            <option value="semi-gastronomique">Semi-gastronomique</option>
+                            <option value="gastronomique">Gastronomique</option>
+                            <option value="cantine">Cantine collective</option>
+                            <option value="foodtruck">Foodtruck</option>
+                            <option value="fastfood">Fastfood</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="owner-name" class="block text-gray-700 font-medium mb-2">Nom du propriétaire</label>
+                        <input type="text" id="owner-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label for="job-offered" class="block text-gray-700 font-medium mb-2">Recherche</label>
+                        <select id="job-offered" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                            <option value="runner">Runner</option>
+                            <option value="serveur">Serveur</option>
+                            <option value="maitre">Maître d'hôtel</option>
+                            <option value="commis">Commis de cuisine</option>
+                            <option value="cuisinier">Cuisinier</option>
+                            <option value="patissier">Pâtissier</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="diploma-required" class="block text-gray-700 font-medium mb-2">Diplôme recherché</label>
+                        <select id="diploma-required" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                            <option value="CAP">CAP</option>
+                            <option value="2nd BAC PRO">2nd BAC PRO</option>
+                            <option value="1ère BAC PRO">1ère BAC PRO</option>
+                            <option value="Terminale BAC PRO">Terminale BAC PRO</option>
+                            <option value="BTS 1ère A">BTS 1ère A</option>
+                            <option value="BTS 2ème A">BTS 2ème A</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="internship-date" class="block text-gray-700 font-medium mb-2">Date de stage proposée</label>
+                        <input type="date" id="internship-date" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 font-medium mb-2">Adresse mail</label>
+                        <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label for="announcement" class="block text-gray-700 font-medium mb-2">Pièce jointe facultative : annonce du stage</label>
+                        <input type="file" id="announcement" class="w-full px-4 py-3 border border-gray-300 rounded-lg">
+                    </div>
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg">Soumettre</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 RestoJob - Lycée Antonin Carême. Tous droits réservés.</p>
+            <p class="mt-2">
+                <a href="https://lyc-careme-savigny-77.fr/" class="text-blue-300 hover:underline">Visitez notre site web</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
